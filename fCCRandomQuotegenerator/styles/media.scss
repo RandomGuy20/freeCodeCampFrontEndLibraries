@@ -1,0 +1,113 @@
+
+@media screen and (max-width:950px) 
+{
+
+    .container
+    {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 30%;
+        height: 45%;
+        #quote-box
+        {
+            height: auto;
+            min-height: 70%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            grid-template-columns: repeat(3,1fr);
+            .quote-container
+            {
+                height: auto;
+                width: 90%;
+                min-height: 55%;
+                .quote-mark
+                {
+                    font-size: 1rem;
+                    padding-right: 5px;
+                }
+                .text-container
+                {
+                    height: auto;
+                    .text-holder
+                    {
+                        padding-top: .5rem;
+                    }
+                    .text
+                    {
+                        width: 100%;
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                }
+                .author-container
+                {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                #author
+                {
+                    font-size: .8rem;
+                    margin-left: 0.2rem;
+                    width: auto;
+                }
+            }
+
+
+            .links-container
+            {
+                display: block;
+
+                .twitter,.tumbler
+                {
+                    position: relative;
+                    float: left;
+                    margin-right: .5rem;
+                    text-align: center;
+                }
+                .new-quote
+                {
+                    position: relative;
+                    float: right;
+                }
+            }
+        }
+    }
+
+.btn
+{
+    height: 20px;
+    //padding: 8px 16px 8px 16px;
+    //font-size: 1rem;
+    //border-radius: 6px;
+   // top: 50%;
+   // transform: translateY(-50%);
+   // background-color: black;
+  //  text-decoration: none;
+  //  color: var(--color-white);
+  //  font-size: 1.1rem;
+}
+
+.new-quote
+{
+    height: 80%;
+    padding: 2px 8px 2px 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn:hover
+{
+    opacity: .8;
+    //Change Color to match current background
+
+}
+
+}
