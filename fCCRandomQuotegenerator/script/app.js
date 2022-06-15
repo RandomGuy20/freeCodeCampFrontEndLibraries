@@ -12,6 +12,9 @@ const autherArea = "#author";
 const colorChange = ".color-change";
 const authtext = ".author";
 const body = "body";
+const twitter = "#twitter";
+const tumblr = "#tumblr";
+const button = "button";
 
 
 const colors = [
@@ -97,20 +100,48 @@ function BuildQuote()
 
     // get the quote
     currentQuote = quoteData[qDigit].text;
-    $(textArea).text(currentQuote);
-
 
 
     //Get the author
     currentAuthor = quoteData[qDigit].author;
-    $(autherArea).text(currentAuthor);
 
-    //Change the colors
+
+    //Get new color
     let colorNum = Math.floor(Math.random() *(11 -0 +1) +0);
-    $(colorChange).css("background-color", colors[colorNum]);
-    $(author).css("color", colors[colorNum]);
-    $(textColor).css("color", colors[colorNum]);
+//    / $(colorChange).css("background-color", colors[colorNum]);
 
+
+
+
+    //Fade Text in and out
+    $(".text-holder").animate({opacity:0},500,function () 
+    {
+        $(this).animate({ opacity: 1 }, 500);
+        $(textColor).css("color", colors[colorNum]);
+        $(textColor).text(currentQuote);
+    });
+
+    //Fade Author in and out
+    $(".author-container").animate({opacity:0},500,function () 
+    {
+        $(this).animate({ opacity: 1 }, 500);
+        $(author).css("color", colors[colorNum]);
+        $(autherArea).text("- " + currentAuthor);
+    });
+
+    // Fade Body in and out
+    $(body).delay(1000).css("background-color",colors[colorNum]);
+
+    //Change Button Colors
+    $(".btn").delay(1000).css("background-color",colors[colorNum]);
+
+
+    // Set Twittwer info
+    $(twitter).attr("href", 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text='+ encodeURIComponent(currentQuote + " " + currentAuthor));
+
+    //Set Tumbler data
+    $(tumblr).attr("href","https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=" +  encodeURIComponent(currentAuthor) +
+          '&content=' + encodeURIComponent(currentQuote) +'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
 
 }
 
@@ -120,18 +151,14 @@ $(document).ready(function ()
     setTimeout(function()
     {
         BuildQuote();
-    },500);
+    },600);
 
 });
 
 //Listen For Quote Click
-$(".new-quote").click(function (e) 
+$("#new-quote").click(function (e) 
 {     
     BuildQuote();
 });
 
-
-//Listen For twitter Click
-
-
-//Listen For Tumblr Click
+ 

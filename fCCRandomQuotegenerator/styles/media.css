@@ -1,17 +1,8 @@
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1200px) {
   .container {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 30%;
-    height: 45%;
+    min-height: 45%;
   }
   .container #quote-box {
-    height: auto;
-    min-height: 70%;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -24,34 +15,23 @@
         grid-template-columns: repeat(3, 1fr);
   }
   .container #quote-box .quote-container {
-    height: auto;
-    width: 90%;
     min-height: 55%;
+    margin-bottom: 1rem;
   }
   .container #quote-box .quote-container .quote-mark {
     font-size: 1rem;
     padding-right: 5px;
   }
-  .container #quote-box .quote-container .text-container {
-    height: auto;
-  }
   .container #quote-box .quote-container .text-container .text-holder {
     padding-top: .5rem;
   }
   .container #quote-box .quote-container .text-container .text {
-    width: 100%;
     margin-top: 1rem;
     font-size: 1rem;
-    text-align: center;
     line-height: 20px;
   }
   .container #quote-box .quote-container .author-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    margin-bottom: 1rem;
   }
   .container #quote-box .quote-container #author {
     font-size: .8rem;
@@ -59,26 +39,25 @@
     width: auto;
   }
   .container #quote-box .links-container {
-    display: block;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    bottom: 0;
   }
   .container #quote-box .links-container .twitter, .container #quote-box .links-container .tumbler {
     position: relative;
     float: left;
-    margin-right: .5rem;
+    margin-right: .3rem;
     text-align: center;
   }
-  .container #quote-box .links-container .new-quote {
-    position: relative;
-    float: right;
+  .container #quote-box .links-container #new-quote {
+    height: 20px;
+    width: 45px;
+    font-size: 12px;
   }
   .btn {
     height: 20px;
-  }
-  .new-quote {
-    height: 80%;
-    padding: 2px 8px 2px 8px;
-    border: none;
-    font-size: 1rem;
+    width: 20px;
   }
   .btn:hover {
     opacity: .8;
