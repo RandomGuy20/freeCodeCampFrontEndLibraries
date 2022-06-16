@@ -1,0 +1,86 @@
+
+@media screen and (max-width:1200px) 
+{
+
+    .container
+    {
+
+        min-height: 45%;
+        #quote-box
+        {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            grid-template-columns: repeat(3,1fr);
+            .quote-container
+            {
+                min-height: 55%;
+                margin-bottom: 1rem;
+                .quote-mark
+                {
+                    font-size: 1rem;
+                    padding-right: 5px;
+                }
+                .text-container
+                {
+                     .text-holder
+                    {
+                        padding-top: .5rem;
+                    }
+                    .text
+                    {
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                        line-height: 20px;
+                    }
+                }
+                .author-container
+                {
+                    margin-bottom: 1rem;
+                }
+
+                #author
+                {
+                    font-size: .8rem;
+                    margin-left: 0.2rem;
+                    width: auto;
+                }
+            }
+
+
+            .links-container
+            {
+                width: 90%;
+                padding-left: 5%;
+                padding-right: 5%;
+                bottom: 0;
+                .twitter,.tumbler
+                {
+                    position: relative;
+                    float: left;
+                    margin-right: .3rem;
+                    text-align: center;
+                }
+                #new-quote
+                {
+                    height: 20px;
+                    width: 45px;
+                    font-size: 12px;
+}
+            }
+        }
+    }
+    .btn
+    {
+        height: 20px;
+        width: 20px;
+    }
+
+
+    .btn:hover
+    {
+        opacity: .8;
+    }
+
+
+}
